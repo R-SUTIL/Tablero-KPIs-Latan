@@ -1,0 +1,39 @@
+DASHBOARD DELTARE - PWA · ÚLTIMA VERSIÓN
+============================================
+
+Esta PWA utiliza como base el tablero más reciente, incluyendo las etiquetas de valor absoluto solicitadas únicamente en:
+- Primas Emitidas / Primas Cedidas por Ramo.
+- Resultado Técnico de Reaseguro (% PC) por Ramo.
+
+Contenido
+---------
+- index.html: tablero completo, responsive e instalable.
+- manifest.webmanifest: configuración de instalación PWA.
+- service-worker.js: caché y funcionamiento offline después de la primera carga.
+- icon-192.png / icon-512.png: iconos de la aplicación.
+- deltare-logo.png: recurso corporativo.
+
+IMPORTANTE
+----------
+No se instala como PWA abriendo index.html desde Descargas (file://).
+Los archivos deben publicarse juntos en un sitio HTTPS.
+
+Instalación Android
+-------------------
+1. Publica todos los archivos de esta carpeta en una misma URL HTTPS.
+2. Abre esa URL con Google Chrome en Android.
+3. Cuando aparezca "Instalar App", púlsalo. Alternativamente: menú de Chrome > Instalar aplicación / Añadir a pantalla de inicio.
+4. Android creará el icono "Dashboard DeltaRe".
+5. Al abrirlo, se mostrará a pantalla completa en modo aplicación.
+
+PC
+--
+La misma URL funciona en Chrome o Edge y también puede instalarse como aplicación.
+
+Offline
+-------
+La primera carga debe hacerse con Internet. El Service Worker almacena el tablero y dependencias. Después podrá abrirse sin conexión, sujeto a que el navegador haya completado el caché.
+
+Actualizaciones
+---------------
+Para publicar una versión futura, sustituye index.html y cambia CACHE_NAME en service-worker.js para forzar actualización del caché en equipos ya instalados.

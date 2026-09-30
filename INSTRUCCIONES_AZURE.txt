@@ -1,0 +1,25 @@
+DASHBOARD DELTARE - PAQUETE LISTO PARA AZURE STATIC WEB APPS
+
+Archivos que deben quedar en la RAIZ del repositorio:
+- index.html
+- manifest.webmanifest
+- service-worker.js
+- staticwebapp.config.json
+- deltare-logo.png
+- icon-192.png
+- icon-512.png
+
+Configuracion recomendada en Azure Static Web Apps (GitHub):
+- Build Presets: Custom
+- App location: /
+- API location: dejar vacio
+- Output location: dejar vacio
+
+Si el workflow generado intenta compilar la app, editar el archivo .github/workflows/azure-static-web-apps-*.yml y usar:
+  app_location: "/"
+  api_location: ""
+  output_location: ""
+  skip_app_build: true
+
+Tras desplegar, Azure mostrara una URL HTTPS *.azurestaticapps.net.
+Abra esa URL en Chrome Android y use el boton "Instalar App" del tablero o el menu de Chrome > Instalar aplicacion/Añadir a pantalla de inicio.
